@@ -1,0 +1,12 @@
+
+.menu_item {
+    @apply flex gap-2 items-center px-3 py-1.5 rounded-md font-default hover:bg-indigo-400;
+}
+
+.menu_list {
+    @apply flex flex-col gap-1 border-solid border-2 border-neutral-400 font-default p-1 rounded-lg;
+}
+
+.menu_div {
+    @apply flex flex-col gap-1 min-w-max;
+}

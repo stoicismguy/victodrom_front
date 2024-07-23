@@ -1,0 +1,19 @@
+.profile_username {
+    @apply flex font-default gap-2 h-min;
+}
+
+.username_div {
+    @apply flex flex-col p-1 gap-2;
+}
+
+.username_label {
+    @apply text-xs pl-3;
+}
+
+.username_input{
+    @apply border rounded-md px-2 py-0.5 focus:border-sky-500;
+}
+
+.save_button {
+    @apply font-default bg-indigo-400 rounded-md px-2 py-0.5 hover:bg-indigo-500;
+}

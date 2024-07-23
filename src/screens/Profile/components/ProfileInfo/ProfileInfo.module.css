@@ -1,0 +1,7 @@
+.profile_info_div {
+    @apply w-full flex flex-col gap-2;
+}
+
+.profile_info_div > * {
+    @apply flex w-full p-3 border-2 border-neutral-400 rounded-lg;
+}
