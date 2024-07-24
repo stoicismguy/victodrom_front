@@ -1,5 +1,6 @@
 import profile_png from '../../../../assets/profile.png'
 import classes from './ProfileUsername.module.css'
+import ProfileGroups from '../ProfileGroups/ProfileGroups';
 
 function ProfileUsername() {
     return (
@@ -16,6 +17,7 @@ function ProfileUsername() {
                 </div>
                 <button type="button" className={classes.save_button}>Сохранить</button>            
             </div>
+            <ProfileGroups></ProfileGroups>
         </div>
     );
 }
