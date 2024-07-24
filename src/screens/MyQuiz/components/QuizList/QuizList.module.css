@@ -1,0 +1,32 @@
+.quiz_list {
+    @apply grid gap-2;
+}
+
+.quiz_item {
+    @apply block;
+}
+
+.quiz_link {
+    @apply flex flex-col font-default justify-center border-2 border-neutral-400 p-4 rounded-lg;
+}
+
+.item_info {
+    @apply mt-2;
+}
+
+.item_img {
+    @apply object-cover w-[250px] h-[130px];
+}
+
+.item_title {
+    @apply font-bold text-xl leading-7;
+}
+
+.item_author {
+    @apply text-base leading-5;
+}
+
+.item_author_username {
+    @apply text-base italic leading-4;
+}
+

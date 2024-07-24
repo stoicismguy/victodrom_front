@@ -13,29 +13,34 @@ function MenuList () {
 
     const buttons = [
         {
-            href: "#",
+            href: "me",
             image: svg_profile,
-            text: "Профиль"
+            text: "Профиль",
+            link_name: ""
         },
         {
-            href: "#",
+            href: "my-quizzes",
             image: svg_my_quiz,
-            text: "Мои викторины"
+            text: "Мои викторины",
+            link_name: ""
         },
         {
             href: "#",
             image: svg_solved,
-            text: "Пройденные викторины"
+            text: "Пройденные викторины",
+            link_name: "solved-quizzes"
         },
         {
             href: "#",
             image: svg_create,
-            text: "Создать викторину"
+            text: "Создать викторину",
+            link_name: "create"
         },
         {
             href: "#",
             image: svg_groups,
-            text: "Мои группы"
+            text: "Мои группы",
+            link_name: "groups"
         },
     ]
 
