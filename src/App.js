@@ -3,6 +3,7 @@ import './App.css';
 import Main from './screens/Main/Main';
 import Profile from './screens/Profile/Profile';
 import MyQuiz from './screens/MyQuiz/MyQuiz';
+import SolvedQuiz from './screens/SolvedQuiz/SolvedQuiz';
 
 
 import {BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
@@ -17,6 +18,7 @@ function App() {
           <Route path='' element={<Navigate to="me"/>}/>
           <Route path='me' element={<Profile/>}/>
           <Route path='my-quizzes' element={<MyQuiz/>}/>
+          <Route path='solved-quizzes' element={<SolvedQuiz/>}/>
         </Route>    
         <Route path='quiz'>
           <Route path='' element={<Navigate to="create"/>}/>

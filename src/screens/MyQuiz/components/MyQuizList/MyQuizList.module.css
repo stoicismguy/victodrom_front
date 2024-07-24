@@ -7,7 +7,7 @@
 }
 
 .quiz_link {
-    @apply flex flex-col font-default justify-center border-2 border-neutral-400 p-4 rounded-lg;
+    @apply flex flex-col font-default justify-center border-2 border-neutral-400 p-4 rounded-lg hover:border-neutral-600 hover:bg-neutral-100;
 }
 
 .item_info {
@@ -15,7 +15,7 @@
 }
 
 .item_img {
-    @apply object-cover w-[250px] h-[130px];
+    @apply object-cover w-[300px] h-[130px];
 }
 
 .item_title {

@@ -10,3 +10,7 @@
 .menu_div {
     @apply flex flex-col gap-1 min-w-max;
 }
+
+.active_button {
+    @apply bg-indigo-400;
+}

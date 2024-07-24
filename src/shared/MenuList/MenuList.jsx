@@ -16,40 +16,36 @@ function MenuList () {
             href: "me",
             image: svg_profile,
             text: "Профиль",
-            link_name: ""
         },
         {
             href: "my-quizzes",
             image: svg_my_quiz,
             text: "Мои викторины",
-            link_name: ""
         },
         {
-            href: "#",
+            href: "solved-quizzes",
             image: svg_solved,
             text: "Пройденные викторины",
-            link_name: "solved-quizzes"
         },
         {
-            href: "#",
+            href: "create",
             image: svg_create,
             text: "Создать викторину",
-            link_name: "create"
         },
         {
-            href: "#",
+            href: "groups",
             image: svg_groups,
             text: "Мои группы",
-            link_name: "groups"
         },
     ]
-
+    const link = window.location.href.split("/")
+    const active_button_name = link[link.length-1];
 
     return (
         <div className={classes.menu_div}>
             <ul className={classes.menu_list}>
                 {buttons.map((item) => {
-                    return <MenuItem href={item.href} image={item.image} text={item.text}></MenuItem>
+                    return <MenuItem href={item.href} image={item.image} text={item.text} active={active_button_name === item.href ? true : false}></MenuItem>
                 })}
             </ul>
             <BackButton></BackButton>

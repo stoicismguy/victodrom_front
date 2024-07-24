@@ -1,7 +1,7 @@
 import CommonHeader from "../../shared/Header/Header";
 import MenuList from "../../shared/MenuList/MenuList";
 import MainWrapper from "../../shared/MainWrapper/MainWrapper";
-import QuizList from "./components/QuizList/QuizList";
+import MyQuizList from './components/MyQuizList/MyQuizList'
 
 function MyQuiz() {
     return (
@@ -9,7 +9,7 @@ function MyQuiz() {
         <CommonHeader></CommonHeader>
         <MainWrapper>
             <MenuList></MenuList>
-            <QuizList></QuizList>
+            <MyQuizList></MyQuizList>
         </MainWrapper>        
         </>
     );
