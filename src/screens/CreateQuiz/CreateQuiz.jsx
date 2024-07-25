@@ -3,6 +3,7 @@ import MainWrapper from '../../shared/MainWrapper/MainWrapper';
 import NavList from './components/NavList/NavList';
 import CommonHeader from '../../shared/Header/Header';
 import EditWindow from './components/EditWindow/EditWindow';
+import Settings from './components/Settings/Settings';
 
 
 function CreateQuiz() {
@@ -46,14 +47,23 @@ function CreateQuiz() {
         }
     ]};
 
+    function add_new_question() {
+        console.log('clicked');
+        // console.log(this.data);
+        
+    }
+
 
     return(
         <>
             <CommonHeader></CommonHeader>
             <MainWrapper>
-                <div className='flex w-full gap-1'>
-                    <NavList></NavList>
-                    <EditWindow></EditWindow>
+                <div className='flex w-full flex-col gap-1'>
+                    <Settings></Settings>         
+                    <div className='flex w-full gap-1 min-h-[260px]'>
+                        <NavList data={data['questions']} new={add_new_question}></NavList>
+                        <EditWindow></EditWindow>
+                    </div>
                 </div>
             </MainWrapper>
         </>

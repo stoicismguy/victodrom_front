@@ -1,5 +1,6 @@
 :root {
     --list-item-side: 80px;
+    --add-svg-side: 80px;
 }
 
 .nav_list {
@@ -8,5 +9,9 @@
 
 .list_item {
     @apply w-[var(--list-item-side)] h-[var(--list-item-side)] text-xl border-2 border-neutral-400 rounded-lg text-center cursor-pointer flex transition justify-center items-center
-    hover:border-neutral-500;
+    hover:border-neutral-500
+}
+
+.add_q {
+    @apply w-[var(--add-svg-side)] h-[var(--add-svg-side)] text-4xl text-center cursor-pointer flex transition justify-center items-center
 }

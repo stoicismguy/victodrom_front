@@ -12,8 +12,8 @@ function CommonHeader() {
                 <p className={classes.title}>Виктодром</p>
             </Link>
             <Link to="/">
-                <img src={logo} width="40" alt="logo" />     
-            </Link>        
+                <img src={logo} className={classes.logo} width="40" alt="logo" />     
+            </Link>       
             <div className={classes.profile_nav}>
                 <Link className={classes.profile_info} to='/profile'>
                     <p>stoicismguy</p>

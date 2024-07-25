@@ -1,0 +1,8 @@
+
+.settings_div {
+    @apply w-full font-default border-neutral-400 border-2 rounded-lg p-4;
+}
+
+.settings_title {
+    @apply text-2xl font-bold;
+}

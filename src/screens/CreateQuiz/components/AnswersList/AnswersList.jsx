@@ -6,6 +6,9 @@ function AnswersList() {
     return (
         <ul className={classes.answers_list}>
             <AnswersItem></AnswersItem>
+            <AnswersItem></AnswersItem>
+            <AnswersItem></AnswersItem>
+            <AnswersItem></AnswersItem>
         </ul>
     );
 }

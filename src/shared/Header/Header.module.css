@@ -13,3 +13,8 @@
 .profile_info {
     @apply flex gap-2 items-center;
 }
+
+.logo:hover {
+    transform: rotate(360deg);
+    transition: transform 1s;
+}

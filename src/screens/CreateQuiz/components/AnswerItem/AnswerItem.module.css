@@ -1,11 +1,22 @@
+:root {
+    --default-height-answer-text: 40px;
+}
+
 .answer_item {
-    @apply w-full;
+    @apply flex gap-2 items-center w-full p-3 border-2 border-neutral-400 rounded-3xl;
 }
 
 .answer_text {
-    @apply w-full bg-indigo-200 border-2 rounded-lg;
+    @apply w-full h-full rounded-2xl text-center min-h-[var(--default-height-answer-text)] h-[var(--default-height-answer-text)] p-2;
 }
 
 .answer_item:nth-child() {
     @apply w-full;
+}
+
+.svg_delete:hover {
+    @apply cursor-pointer;
+    filter: brightness(0) saturate(100%) invert(12%) sepia(71%) saturate(7481%) hue-rotate(2deg) brightness(86%) contrast(113%);
+    transform: rotate(180deg);
+    transition: transform 0.45s;
 }
