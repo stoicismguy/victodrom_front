@@ -2,3 +2,7 @@
 .profile_groups_div {
     @apply w-full;
 }
+
+.groups_list {
+    @apply flex flex-wrap gap-1  w-full *:rounded-full *:border *:border-2 *:border-indigo-400 *:bg-indigo-200 *:px-2 *:py-0.5;
+}

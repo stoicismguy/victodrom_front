@@ -4,6 +4,7 @@ import Main from './screens/Main/Main';
 import Profile from './screens/Profile/Profile';
 import MyQuiz from './screens/MyQuiz/MyQuiz';
 import SolvedQuiz from './screens/SolvedQuiz/SolvedQuiz';
+import CreateQuiz from './screens/CreateQuiz/CreateQuiz';
 
 
 import {BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
@@ -22,6 +23,7 @@ function App() {
         </Route>    
         <Route path='quiz'>
           <Route path='' element={<Navigate to="create"/>}/>
+          <Route path='create' element={<CreateQuiz/>}/>
           <Route path=':id' element={<Navigate to="me"/>}/>
         </Route>   
       </Routes>

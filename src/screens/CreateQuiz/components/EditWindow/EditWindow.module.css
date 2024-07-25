@@ -1,0 +1,8 @@
+
+.edit_div {
+    @apply w-full flex flex-col rounded-lg border-2 border-neutral-400 items-center p-4;
+}
+
+.edit_wrapper {
+    @apply flex flex-col w-2/3 font-default;
+}

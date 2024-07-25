@@ -1,0 +1,11 @@
+.answer_item {
+    @apply w-full;
+}
+
+.answer_text {
+    @apply w-full bg-indigo-200 border-2 rounded-lg;
+}
+
+.answer_item:nth-child() {
+    @apply w-full;
+}
