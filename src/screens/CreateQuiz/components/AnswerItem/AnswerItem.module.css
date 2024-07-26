@@ -1,5 +1,6 @@
 :root {
     --default-height-answer-text: 40px;
+    --checkbox-side: 40px;
 }
 
 .answer_item {
@@ -7,7 +8,7 @@
 }
 
 .answer_text {
-    @apply w-full h-full rounded-2xl text-center min-h-[var(--default-height-answer-text)] h-[var(--default-height-answer-text)] p-2;
+    @apply w-full h-full rounded-2xl text-center min-h-[var(--default-height-answer-text)] text-xl h-[var(--default-height-answer-text)] p-2;
 }
 
 .answer_item:nth-child() {
@@ -19,4 +20,8 @@
     filter: brightness(0) saturate(100%) invert(12%) sepia(71%) saturate(7481%) hue-rotate(2deg) brightness(86%) contrast(113%);
     transform: rotate(180deg);
     transition: transform 0.45s;
+}
+
+.correct_input {
+    @apply w-[var(--checkbox-side)] h-[var(--checkbox-side)] rounded-lg accent-green-700 border-2;
 }
