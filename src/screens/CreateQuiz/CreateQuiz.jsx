@@ -10,67 +10,41 @@ import { useState } from 'react';
 
 function CreateQuiz() {
 
-    // let data = {'questions': [
-    //     {
-    //         id: 0,
-    //         text: "it's q№1",
-    //         answers: [
-    //             {
-    //                 text: "ans1",
-    //                 correct: true
-    //             },
-    //             {
-    //                 text: "ans2",
-    //                 correct: false
-    //             },
-    //             {
-    //                 text: "ans3",
-    //                 correct: false
-    //             }
-    //         ]
-    //     },
-    //     {
-    //         id: 1,
-    //         text: "it's q№2",
-    //         answers: [
-    //             {
-    //                 text: "ans1",
-    //                 correct: false
-    //             },
-    //             {
-    //                 text: "ans2",
-    //                 correct: true
-    //             },
-    //             {
-    //                 text: "ans3",
-    //                 correct: false
-    //             }
-    //         ]
-    //     }
-    // ]};
-    let data = {'settings': {},
-        'questions': [
+    const answer_structure = {
+        text: "",
+        correct: false,
+    }
+
+    const [currentQuestion, setcurrentQuestion] = useState(0);
+    const [data, setData] = useState({
+        settings: {},
+        questions: [
             {id: 0, text: "TEst", answers: [
                 {
                     text: "ans3",
                     correct: false,
                 }
             ]}
-        ]}
+        ]});
 
-    const [arrt, setArrt] = useState([]);
-    const [currentQuestion, setcurrentQuestion] = useState(0);
-
-    function add_new_question() {
-        console.log(arrt)
-        let arr=arrt;
-        arr.push(2)
-        setArrt(arr);
-        console.log(arrt)
-        console.log('did')
+    const functions = {
+        new_answer: () => {
+            let newData = structuredClone(data);
+            newData.questions[currentQuestion].answers.push(structuredClone(answer_structure));
+            setData(newData);
+        },
+        delete_anser: (index) => {
+            let newData = structuredClone(data);
+            newData.questions[currentQuestion].answers = newData.questions[currentQuestion].answers.slice(0, index).concat(newData.questions[currentQuestion].answers.slice(index+1));
+            setData(newData);
+        },
+        set_answer_text: (index, value) => {
+            let newData = structuredClone(data);
+            newData.questions[currentQuestion].answers[index].text = value;
+            setData(newData);
+        }
     }
-
-
+   
     return(
         <>
             <CommonHeader></CommonHeader>
@@ -78,8 +52,8 @@ function CreateQuiz() {
                 <div className='flex w-full flex-col gap-1'>
                     <Settings></Settings>         
                     <div className='flex w-full gap-1 min-h-[260px]'>
-                        <NavList data={data['questions']} new={add_new_question}></NavList>
-                        <EditWindow question={data['questions'][currentQuestion]}></EditWindow>
+                        <NavList data={data.questions}></NavList>
+                        <EditWindow question={data.questions[currentQuestion]} functions={functions}></EditWindow>
                     </div>
                 </div>
             </MainWrapper>

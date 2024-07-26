@@ -7,7 +7,7 @@ function EditWindow(props) {
         <div className={classes.edit_div}>
             <div className={classes.edit_wrapper}>
                 <QuestionTextInput text={props.question.text}></QuestionTextInput>
-                <AnswersList answers={props.question.answers}></AnswersList>
+                <AnswersList answers={props.question.answers} functions={props.functions}></AnswersList>
             </div>              
         </div>
     );
