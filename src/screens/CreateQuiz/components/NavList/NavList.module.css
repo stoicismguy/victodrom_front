@@ -15,3 +15,7 @@
 .add_q {
     @apply w-[var(--add-svg-side)] h-[var(--add-svg-side)] text-4xl text-center cursor-pointer flex transition justify-center items-center
 }
+
+.current_question {
+    @apply bg-indigo-100;
+}

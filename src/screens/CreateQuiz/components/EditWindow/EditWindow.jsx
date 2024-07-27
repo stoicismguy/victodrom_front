@@ -6,7 +6,7 @@ function EditWindow(props) {
     return(
         <div className={classes.edit_div}>
             <div className={classes.edit_wrapper}>
-                <QuestionTextInput text={props.question.text}></QuestionTextInput>
+                <QuestionTextInput text={props.question.text} functions={props.functions}></QuestionTextInput>
                 <AnswersList answers={props.question.answers} functions={props.functions}></AnswersList>
             </div>              
         </div>

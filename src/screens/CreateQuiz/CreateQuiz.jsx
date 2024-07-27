@@ -15,13 +15,30 @@ function CreateQuiz() {
         correct: false,
     }
 
-    const [currentQuestion, setcurrentQuestion] = useState(0);
+    const question_structure = {
+        id: 0, text: "", answers: [
+            {
+                text: "",
+                correct: false,
+            },
+            {
+                text: "",
+                correct: false,
+            }
+        ]
+    }
+
+    const [currentQuestion, setcurrentQuestion] = useState(0); //index of the question on the screen
     const [data, setData] = useState({
         settings: {},
         questions: [
-            {id: 0, text: "TEst", answers: [
+            {id: 0, text: "", answers: [
                 {
-                    text: "ans3",
+                    text: "",
+                    correct: false,
+                },
+                {
+                    text: "",
                     correct: false,
                 }
             ]}
@@ -42,6 +59,24 @@ function CreateQuiz() {
             let newData = structuredClone(data);
             newData.questions[currentQuestion].answers[index].text = value;
             setData(newData);
+        },
+        new_question: () => {
+            let newData = structuredClone(data);
+            newData.questions.push(structuredClone(question_structure));
+            setData(newData);
+        },
+        change_question_number: (number) => {
+            setcurrentQuestion(number);
+        },
+        set_question_text: (value) => {
+            let newData = structuredClone(data);
+            newData.questions[currentQuestion].text = value;
+            setData(newData);
+        },
+        toggle_correct_answer: (index) => {
+            let newData = structuredClone(data);
+            newData.questions[currentQuestion].answers[index].correct = !newData.questions[currentQuestion].answers[index].correct;
+            setData(newData);
         }
     }
    
@@ -52,7 +87,7 @@ function CreateQuiz() {
                 <div className='flex w-full flex-col gap-1'>
                     <Settings></Settings>         
                     <div className='flex w-full gap-1 min-h-[260px]'>
-                        <NavList data={data.questions}></NavList>
+                        <NavList data={data.questions} current_question={currentQuestion} functions={functions}></NavList>
                         <EditWindow question={data.questions[currentQuestion]} functions={functions}></EditWindow>
                     </div>
                 </div>

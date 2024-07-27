@@ -7,9 +7,9 @@ function NavList(props) {
     return (
         <ul className={classes.nav_list}>
             {props.data.map((n, index) => {
-                return <li className={classes.list_item} id={index}>{index+1}</li>
+                return <li className={`${classes.list_item} ${props.current_question === index ? classes.current_question : ""}`} id={index} onClick={() => {props.functions.change_question_number(index)}} >{index+1}</li>
             })}
-            <li className={classes.add_q} id='add_q'><img src={plus_svg} alt="Add" width="110" onClick={props.new}/></li>
+            <li className={classes.add_q} id='add_q'><img src={plus_svg} alt="Add" width="110" onClick={props.functions.new_question}/></li>
         </ul>
     );
 
