@@ -6,7 +6,9 @@ function Main() {
     return (
         <>
         <CommonHeader></CommonHeader>
-        <MainWrapper></MainWrapper>
+        <MainWrapper>
+            
+        </MainWrapper>
         </>
     );
 }

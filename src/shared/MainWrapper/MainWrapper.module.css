@@ -1,0 +1,10 @@
+
+.div {
+    @apply w-2/3 flex gap-3 flex-row pt-3 m-auto;
+}
+
+@media screen and (width < 900px){
+    .div {
+        @apply flex-col w-11/12;
+    }
+}

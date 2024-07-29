@@ -1,0 +1,14 @@
+
+.all_div {
+    @apply flex w-full flex-col gap-1;
+}
+
+.edit_div {
+    @apply flex w-full gap-1 min-h-[260px];
+}
+
+@media screen and (width < 900px) {
+    .edit_div {
+        @apply flex-col;
+    }
+}

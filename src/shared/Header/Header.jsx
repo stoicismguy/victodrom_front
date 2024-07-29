@@ -16,7 +16,7 @@ function CommonHeader() {
             </Link>       
             <div className={classes.profile_nav}>
                 <Link className={classes.profile_info} to='/profile'>
-                    <p>stoicismguy</p>
+                    <p className={classes.username}>stoicismguy</p>
                     <img src={profilePhoto} width="40" alt="user_photo" className='h-auto'/>
                 </Link>              
                 <img src={logout} width="20" alt="Leave_btn" />   

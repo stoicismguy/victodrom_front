@@ -1,5 +1,5 @@
 .header {
-    @apply flex justify-between px-3 h-14 font-default border-b-2 border-neutral-400 items-center sm:px-10;
+    @apply flex justify-between px-3 h-14 font-default border-b-2 border-neutral-400 items-center;
 }
 
 .title {
@@ -14,7 +14,21 @@
     @apply flex gap-2 items-center;
 }
 
+.username {
+    @apply p-1;
+}
+
+.profile_info:hover p {
+    @apply bg-indigo-400 rounded-lg;
+}
+
 .logo:hover {
     transform: rotate(360deg);
     transition: transform 1s;
+}
+
+@media screen and (width < 900px){
+    .username {
+        @apply hidden;
+    }
 }

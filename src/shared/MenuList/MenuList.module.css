@@ -14,3 +14,7 @@
 .active_button {
     @apply bg-indigo-400;
 }
+
+@media screen and (width < 900px) {
+    
+}

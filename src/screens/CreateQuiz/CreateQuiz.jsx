@@ -84,9 +84,9 @@ function CreateQuiz() {
         <>
             <CommonHeader></CommonHeader>
             <MainWrapper>
-                <div className='flex w-full flex-col gap-1'>
+                <div className={classes.all_div}>
                     <Settings></Settings>         
-                    <div className='flex w-full gap-1 min-h-[260px]'>
+                    <div className={classes.edit_div}>
                         <NavList data={data.questions} current_question={currentQuestion} functions={functions}></NavList>
                         <EditWindow question={data.questions[currentQuestion]} functions={functions}></EditWindow>
                     </div>
